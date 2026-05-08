@@ -1,0 +1,89 @@
+/* 
+    University of Southern Queensland
+    CSC5740 Client-Side Web Technology
+    Trimester 1, 2026
+
+    Assignment 4: Project
+ 
+    Student: Brett Jenaway
+    Student No: W0104215
+
+    Garden Indian Restaurant Website Design
+*/
+
+/* Declare fonts and colors as variables */
+* {
+    font-family: 'Lato', Calibri, sans-serif, Serif;
+    --logo-font: 'Roboto';
+    --menu-font: 'Inter';
+    /* --feature-color: #7fffd4;
+    --dark-feature-color: #219190;
+    --line-color: #e5e5e5;
+    --button-color: #fdfdfd; */
+}
+
+body {
+    margin: 0;
+}
+
+#hero-image {
+    width: 100%;
+    opacity: 70%;
+}
+
+/* 50% transparent black background  */
+.transparent-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+#hero-image-section {
+    position: relative;
+    text-align: center;
+    color: white;
+    top: 0;
+    z-index: -1;
+}
+
+/* Centered text */
+#logo-name {
+    font-size: 2em;
+    line-height: 0.5em;
+    font-weight: 900;
+    font-family: var(--logo-font), sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+nav {
+    position: absolute;
+    background: linear-gradient(to bottom, black, transparent);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: right;
+
+}
+
+nav a {
+    font-family: var(--menu-font), sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #fff;
+    display: block;
+    padding: 1em;
+    margin: 1em 2em;
+}
+
+.menu-button {
+    border: 3px solid #fff;
+    border-radius: 5px;
+}
