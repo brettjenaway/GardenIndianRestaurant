@@ -21,9 +21,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/stylesheet.css">
     <!-- <link rel="icon" type="image/x-icon" href=""> -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <!-- Google Fonts Embed Code -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kristi">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
     <title>Garden Indian Restaurant</title>
 </head>
 
@@ -35,9 +40,15 @@
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="menu.html">Menu</a></li>
+            <li class="dropdown"><a href="menu.html">Menus ▼</a>
+                <ul class="submenu">
+                    <li><a href="lunch.html">Lunch</a></li>
+                    <li><a href="dinner.html">Dinner</a></li>
+                    <li><a href="takeaway.html">Take-Away</a></li>
+                </ul>
+            </li>
+            <li><a href="location.html">Location</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="report.html">Report</a></li>
             <li><a href="reservations.html" class="menu-button">Reservations</a></li>
         </ul>
     </nav>
@@ -53,14 +64,71 @@
                 <h1>GARDEN</h1>
                 <h1>INDIAN</h1>
                 <h2>RESTAURANT</h2>
+                <p>CHADSTONE'S FAVOURITE INDIAN CUISINE SINCE 2012</p>
             </section>
         </section>
-        <section>
-            Welcome to Garden Indian Restaurant
+        <section class="main-text">
+            <section class="card">
+
+                <span class="card-text card-right">
+                    <h2 class="card-heading-italic">View</h2>
+                    <h2 class="card-heading-regular">Our Menu</h2>
+                    <p>Explore our authentic Indian dishes, from rich curries and sizzling tandoori plates to fresh
+                        naan and traditional desserts.</p>
+                    <a href="menu.html" class="page-button">Food Menus</a>
+                </span>
+                <img src="images/goan-fish-curry.jpg">
+            </section>
+            <section class="card">
+                <img src="images/TheGarden1.jpg">
+                <span class="card-text card-left">
+                    <h2 class="card-heading-italic">Discover</h2>
+                    <h2 class="card-heading-regular">Our Story</h2>
+                    <p>Learn about our passion for Indian cuisine, our family traditions, and the flavours and
+                        hospitality that inspire every dish we serve.</p>
+                    <a href="about.html" class="page-button">Learn More</a>
+                </span>
+            </section>
         </section>
     </main>
 
+    <!-- Footer: bottom navigation links and contact details -->
     <footer>
+        <section id="footer-nav">
+            <aside id="footer-menu-1">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="report.html">Design Report</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </aside>
+            <aside id="footer-menu-2">
+                <h4>Opening Hours</h4>
+                <ul>
+                    <li>Tuesday - Sunday</li>
+                    <li>Lunch: 11:30am - 2:30pm</li>
+                    <li>Dinner: 5:00pm - 9:30pm</li>
+                    <li>Closed Mondays</li>
+                </ul>
+            </aside>
+            <aside id="footer-menu-3">
+                <h4>Location</h4>
+                <ul>
+                    <li>Chadstone Shopping Center</li>
+                    <li>1341 Dandenong Rd</li>
+                    <li>Malvern East VIC 3148</li>
+                    <li>T: (03) 9568 1486</li>
+                </ul>
+                <p></p>
+                <p></p>
+                <p></p>
+            </aside>
+        </section>
+        <section id="footer-copyright">
+            <p>© Copyright 2026 Brett Jenaway | W0104215 </p>
+        </section>
 
     </footer>
 </body>

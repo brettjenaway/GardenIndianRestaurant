@@ -14,8 +14,13 @@
 /* Declare fonts and colors as variables */
 * {
     font-family: 'Lato', Calibri, sans-serif, Serif;
-    --logo-font: 'Roboto';
+    --logo-font: 'Lato';
     --menu-font: 'Inter';
+    --script-font: 'Kristi';
+    --heading-font: 'Inter';
+    --background-color: #F2F0EF;
+    --text-accent-color: rgb(165, 127, 77);
+    --text-accent-color-dark: rgb(116, 88, 52);
     /* --feature-color: #7fffd4;
     --dark-feature-color: #219190;
     --line-color: #e5e5e5;
@@ -24,11 +29,17 @@
 
 body {
     margin: 0;
+    background-color: var(--background-color);
 }
 
+
+/******* Hero Image & Text *******/
 #hero-image {
     width: 100%;
     opacity: 70%;
+    max-height: 100vh;
+    object-fit: cover;
+
 }
 
 /* 50% transparent black background  */
@@ -45,11 +56,9 @@ body {
     z-index: -1;
 }
 
-/* Centered text */
+/* Hero image logo text */
 #logo-name {
-    font-size: 2em;
-    line-height: 0.5em;
-    font-weight: 900;
+    text-transform: uppercase;
     font-family: var(--logo-font), sans-serif;
     position: absolute;
     top: 50%;
@@ -57,19 +66,40 @@ body {
     transform: translate(-50%, -50%);
 }
 
+#logo-name h1 {
+    font-size: 4em;
+    line-height: 0.5em;
+    font-weight: 900;
+}
+
+#logo-name h2 {
+    font-size: 3em;
+    line-height: 0.5em;
+    font-weight: 900;
+}
+
+#logo-name P {
+    font-size: 1.2em;
+    line-height: 0.5em;
+    font-weight: 900;
+}
+
+
+
+/****** Top Menu Bar ******/
 nav {
     position: absolute;
     background: linear-gradient(to bottom, black, transparent);
     padding: 0;
     margin: 0;
     width: 100%;
+    z-index: 10;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: right;
-
+    justify-content: space-evenly;
 }
 
 nav a {
@@ -80,10 +110,501 @@ nav a {
     color: #fff;
     display: block;
     padding: 1em;
-    margin: 1em 2em;
+    /* margin: 1em 2em; */
+}
+
+nav a:hover {
+    color: #AAAAAA;
+    border-color: #AAAAAA;
+    transition: 0.2s;
 }
 
 .menu-button {
     border: 3px solid #fff;
     border-radius: 5px;
+}
+
+/* Sub-menu */
+nav li {
+    position: relative;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(38, 38, 38, 0.8);
+    border-radius: 2px;
+    padding: 0;
+    color: white;
+    width: 9em;
+}
+
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/****** Footer ******/
+
+#footer-nav {
+    background-color: #262626;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+}
+
+#footer-copyright {
+    background-color: #1B1B1B;
+    border-top: solid 1px #444444;
+    color: #999999;
+    width: 100%;
+}
+
+#footer-copyright p {
+    margin: 0 auto;
+
+    padding: 0.8em 0;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin: 0.4em 0;
+    color: #AAAAAA;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    margin: 0.2em 0;
+}
+
+footer a:hover {
+    color: #AAAAAA;
+    transition: 0.2s;
+}
+
+footer h4 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+
+
+/******* Main Body  *******/
+/* Home Page */
+
+
+/* Homepage Card */
+.card {
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 2em auto;
+    align-items: center;
+}
+
+.card img {
+    height: 500px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 1em;
+    border: 1px solid var(--line-color);
+    box-shadow: 0 25px 50px -12px #cccccc;
+}
+
+.card p {
+    width: 75%;
+    margin: 2em auto;
+    font-size: 1.2em;
+}
+
+.card-text {
+    border: 1px solid var(--line-color);
+    border-radius: 1em;
+    box-shadow: 0 25px 50px -12px #cccccc;
+    text-align: center;
+    max-height: 300px;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 2em 0 3em 0;
+    z-index: 2;
+}
+
+.card-left {
+    margin-left: -30px;
+}
+
+.card-right {
+    margin-right: -30px;
+}
+
+.card-heading-italic {
+    font-family: var(--script-font), sans-serif;
+    font-size: 4em;
+    margin: 0 0 -10px 0;
+
+    color: var(--text-accent-color);
+    font-weight: 400;
+}
+
+.card-heading-regular {
+    font-family: var(--heading-font), sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: -2px;
+    font-size: 3em;
+    margin: 0;
+}
+
+.page-button {
+    color: var(--text-accent-color);
+    border-radius: 5px;
+    border: 2px solid var(--text-accent-color);
+    text-decoration: none;
+    padding: 0.8em;
+    font-weight: 600;
+}
+
+.page-button:hover {
+    color: var(--text-accent-color-dark);
+    border-color: var(--text-accent-color-dark);
+    transition: 0.2s;
+}
+
+
+/******** Menu Pages ********/
+.food-menu {
+    border: 1px solid var(--line-color);
+    border-radius: 1em;
+    box-shadow: 0 25px 50px -12px #cccccc;
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 2em 0 3em 0;
+    z-index: 2;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 2em auto;
+    align-items: center;
+}
+
+.food-menu h3 {
+    font-family: var(--script-font);
+    font-size: 3em;
+    font-weight: 400;
+    color: var(--text-accent-color)
+}
+
+
+takeaway-form {
+    border: none;
+}
+
+.dish {
+    display: grid;
+    grid-template-columns: auto minmax(0, 50px);
+    width: 70%;
+    margin: auto;
+    padding-bottom: 1em;
+}
+
+.takeaway {
+    display: grid;
+    grid-template-columns: auto minmax(0, 50px) 50px;
+    width: 70%;
+    margin: auto;
+    padding-bottom: 1em;
+}
+
+.dish-name {
+    text-align: left;
+    font-size: 1.5em;
+    display: flex;
+    gap: 0.5em;
+    margin: 0;
+    white-space: nowrap;
+    align-items: end;
+}
+
+/* Add a dynamic line of dots between the dish name and the price */
+.dish-name::after {
+    content: "";
+    flex: 1;
+    border-bottom: 2px dotted #999;
+}
+
+.lunch::after {
+    border-bottom: none;
+}
+
+
+
+.dish-description {
+    display: flex;
+    align-items: flex-end;
+    text-align: left;
+    padding-top: 0.5em;
+    margin: 0;
+    max-width: 80%;
+}
+
+
+.dish-price {
+    font-size: 1.5em;
+    margin: auto 0;
+    text-align: right;
+}
+
+.spice-mild {
+    color: #1b8a5a;
+}
+
+.spice-medium {
+    color: #f8b90b;
+}
+
+.spice-hot {
+    color: #ee3e32;
+}
+
+#spice-level {
+    margin: 0 auto;
+    width: 40%;
+    margin-top: 0.5em;
+    background-color: #fafafa;
+    padding: 0.8em 0;
+    border-radius: 8px;
+    border: 1px solid var(--line-color);
+    border-radius: 1em;
+    /* box-shadow: 0 15px 50px -12px #666; */
+}
+
+.hidden {
+    display: none !important;
+}
+
+#menu-nav {
+    width: 80%;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#menu-nav li {
+    text-decoration: none;
+    padding: 1em;
+    margin: 0;
+}
+
+.food-menu-button {
+    font-size: 1.2em;
+    border: none;
+    background: none;
+}
+
+.food-menu-button:hover {
+    color: var(--text-accent-color-dark);
+    cursor: pointer;
+}
+
+.food-menu-button.active {
+    color: var(--text-accent-color);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.lunch {
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+
+.menu-section h3 {
+    margin: 0.5em 0;
+}
+
+.menu-section {
+    padding-bottom: 1em;
+}
+
+.card-description {
+    width: 60%;
+    margin: 1em auto;
+}
+
+.menu-notes {
+    color: #999999;
+    font-size: small;
+}
+
+/****** Takeaway Form ******/
+/* Customer details */
+
+#customer-details {
+    max-width: 100%;
+    margin: 0 auto;
+    font-family: var(--menu-font), sans-serif;
+    border: none;
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+#customer-details label {
+    font-size: 1.2em;
+    margin: 0 0.5em;
+    color: var(--text-accent-color-dark);
+}
+
+.text-input {
+    margin: 1em 0;
+    font-size: 1em;
+    padding: 0.3em;
+    max-width: 8em;
+    border: 2px solid lightgrey;
+    border-radius: 8px;
+
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--text-accent-color);
+    box-shadow: 0 0 5px var(--text-accent-color);
+}
+
+.form-button {
+    border: 2px solid lightgrey;
+    font-size: 1.2em;
+    padding: 0.5em;
+    color: var(--text-accent-color-dark);
+    min-width: 1em;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.form-button:active {
+    background-color: #DDD;
+    outline: none;
+    border-color: var(--text-accent-color);
+    box-shadow: 0 0 5px var(--text-accent-color);
+}
+
+
+/* Quantity buttons */
+.quantity-input {
+    border: none;
+    max-width: 25px;
+    font-size: 1em;
+    text-align: center;
+    border: 2px solid lightgrey;
+    border-left: none;
+    border-right: none;
+    font-family: var(--menu-font), sans-serif;
+    color: var(--text-accent-color-dark);
+}
+
+.quantity {
+    display: flex;
+    margin-left: 1em;
+}
+
+
+.quantity-button {
+    border: 2px solid lightgrey;
+    /* background-color: #fff; */
+    font-size: 2em;
+    color: var(--text-accent-color-dark);
+    min-width: 1em;
+    text-align: center;
+}
+
+.quantity-button:active {
+    background-color: #DDD;
+    outline: none;
+    border-color: var(--text-accent-color);
+    box-shadow: 0 0 5px var(--text-accent-color);
+}
+
+.minus {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.plus {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+
+
+
+
+/* Hide spinner buttons from input number text boxes
+   Source: W3 Schools
+   https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp
+   Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+#order-total {
+    display: grid;
+    grid-template-columns: auto 7em 5em;
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.orderTotalHeading {
+    font-size: 1.5em;
+}
+
+.orderTotalItem {
+    font-size: 1.1em;
+}
+
+.orderTotalItemNumber {
+    text-align: center;
+}
+
+
+.totalItems {
+    color: var(--text-accent-color-dark);
+    background-color: #EEE;
+    padding: 1em 0;
+}
+
+
+.orderTotalItemName {
+    padding-left: 0.5em;
+}
+
+#success h3 {
+    margin: 0.5em 0 0 0;
+}
+
+#success button {
+    margin: 1em;
+}
+
+#review-order-button,
+#submit-order {
+    margin-top: 1em;
+}
+
+.errorLabel {
+    color: #b61307
 }

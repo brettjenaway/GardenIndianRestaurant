@@ -1,0 +1,973 @@
+<!-- 
+    University of Southern Queensland
+    CSC5740 Client-Side Web Technology
+    Trimester 1, 2026
+
+    Assignment 4: Project
+ 
+    Student: Brett Jenaway
+    Student No: W0104215
+
+    Garden Indian Restaurant Website Design
+-->
+
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <!-- <link rel="icon" type="image/x-icon" href=""> -->
+    <!-- Google Fonts Embed Code -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kristi">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Garden Indian Restaurant</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown"><a href="menu.html">Menus ▼</a>
+                <ul class="submenu">
+                    <li><a href="lunch.html">Lunch</a></li>
+                    <li><a href="dinner.html">Dinner</a></li>
+                    <li><a href="takeaway.html">Take-Away</a></li>
+                </ul>
+            </li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="reservations.html" class="menu-button">Reservations</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="hero-image-section" class="transparent-bg">
+            <img id="hero-image" src="/images/pexels-dhiraj-jain-207743066-12737918.jpg"
+                alt="An appetizing Indian meal featuring naan, creamy curry, and fresh condiments">
+            <!-- Image credit: Dhiraj Jain 
+         Used under free license from Pexels.com
+         https://www.pexels.com/photo/top-view-of-an-indian-dish-with-onions-and-flatbread-on-the-side-12737918/
+         -->
+            <section id="logo-name" class="centered">
+                <h1>Garden</h1>
+                <h1>Indian</h1>
+                <h2>Restaurant</h2>
+                <p>Chadstone's Favourite Indian Cuisine Since 2012</p>
+            </section>
+        </section>
+        <section class="main-text">
+            <form method="POST" action="" id="takeaway-form">
+                <section class="food-menu">
+                    <h2 class="card-heading-regular">Take-Away Menu</h2>
+
+                    <section id="takeaway-menu">
+                        <ul id="menu-nav">
+                            <li><button type="button" class="food-menu-button active"
+                                    data-menu="menu-entree">Entrée</button>
+                            </li>
+                            <li><button type="button" class="food-menu-button" data-menu="menu-chicken">Chicken</button>
+                            </li>
+                            <li><button type="button" class="food-menu-button" data-menu="menu-lamb">Lamb</button></li>
+                            <li><button type="button" class="food-menu-button" data-menu="menu-beef">Beef</button></li>
+                            <li><button type="button" class="food-menu-button" data-menu="menu-seafood">Seafood</button>
+                            </li>
+                            <li><button type="button" class="food-menu-button"
+                                    data-menu="menu-vegetarian">Vegetarian</button>
+                            </li>
+                            <li><button type="button" class="food-menu-button" data-menu="menu-tandoori-bread">Tandoori
+                                    Bread</button></li>
+                            <li><button type="button" class="food-menu-button" data-menu="menu-rice">Rice</button></li>
+                            <li><button type="button" class="food-menu-button" data-menu="menu-sides">Sides</button>
+                            </li>
+                        </ul>
+                        <article id="menu-entree" class="menu-section">
+                            <h3>Entrée</h3>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Vegetable Samosa</h4>
+                                <p class="dish-price">$8</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Deep fried pastry stuffed with lightly spiced potatoes and
+                                    green
+                                    peas</p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Onion Bhaji</h4>
+                                <p class="dish-price">$8</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Coriander flavoured onion fritters</p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Hara Bhara Kebab</h4>
+                                <p class="dish-price">$12</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Shallow fried vegetable and spinach patties</p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Chicken Tikka</h4>
+                                <p class="dish-price">$12</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Boneless marinated chicken grilled in tandoor</p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Seekh Kebab</h4>
+                                <p class="dish-price">$12</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Spiced and skewed lamb mince cooked in tandoor</p>
+                            </section>
+                        </article>
+                        <article id="menu-chicken" class="menu-section hidden">
+                            <h3>Chicken</h3>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Chicken Tikka Masala<span class="spice-medium">🌶🌶</span></h4>
+                                <p class="dish-price">$20</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Unique combination of spices cooked with onion, capsicum and
+                                    tomato
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Chicken Balti<span class="spice-medium">🌶🌶</span></h4>
+                                <p class="dish-price">$20</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Boneless chicken cooked in medium spiced sauce with onion,
+                                    capsicum
+                                    and tomato
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Chicken Korma<span class="spice-mild">🌶</span></h4>
+                                <p class="dish-price">$20</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Chicken cooked in creamy cashew nut gravy
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Kadai Chicken <span class="spice-medium">🌶🌶</span></h4>
+                                <p class="dish-price">$20</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Chicken cooked in kadai gravy
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Chicken Vindaloo<span class="spice-hot">🌶🌶🌶</span>
+                                </h4>
+                                </h4>
+                                <p class="dish-price">$20</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Spicy curry prepared in goan style
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Mysore Chicken <span class="spice-hot">🌶🌶🌶</span>
+                                </h4>
+                                <p class="dish-price">$20</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description"> Chicken cooked with fresh chillies in coconut creamy sauce
+                                </p>
+                            </section>
+                            <section id="spice-level">
+                                <span class="spice-mild">🌶</span> = Mild &emsp;
+                                <span class="spice-medium">🌶🌶</span> = Medium &emsp;
+                                <span class="spice-hot">🌶🌶🌶</span> = Hot
+                            </section>
+                        </article>
+                        <article id="menu-lamb" class="menu-section hidden">
+                            <h3>Lamb</h3>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Lamb Rogan Josh<span class="spice-medium">🌶🌶</span></h4>
+                                <p class="dish-price">$20</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description"> Lamb cooked in traditional north Indian style
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Lamb Korma<span class="spice-mild">🌶</span></h4>
+                                <p class="dish-price">$20</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Blend of creamy cashew nut gravy cooked with lamb
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Lamb Madras <span class="spice-medium">🌶🌶</span></h4>
+                                <p class="dish-price">$20</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Creamy coconut based delicacy cooked to perfection
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Saag Lamb <span class="spice-mild">🌶</span>/<span
+                                        class="spice-medium">🌶🌶</span></h4>
+                                <p class="dish-price">$20</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Diced lamb cooked with spinach sauce
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Lamb Masala<span class="spice-medium">🌶🌶</span>
+                                </h4>
+                                </h4>
+                                <p class="dish-price">$20</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Lamb cooked in onion, tomato masala gravy
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Lamb Vindaloo<span class="spice-hot">🌶🌶🌶</span>
+                                </h4>
+                                <p class="dish-price">$20</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description"> Spicy lamb curry prepared in Goan style
+                                </p>
+                            </section>
+                            <section id="spice-level">
+                                <span class="spice-mild">🌶</span> = Mild &emsp;
+                                <span class="spice-medium">🌶🌶</span> = Medium &emsp;
+                                <span class="spice-hot">🌶🌶🌶</span> = Hot
+                            </section>
+                        </article>
+                        <article id="menu-beef" class="menu-section hidden">
+                            <h3>Beef</h3>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Beef Rogan Josh<span class="spice-medium">🌶🌶</span></h4>
+                                <p class="dish-price">$20</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description"> Diced beef cooked in traditional north Indian style
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Beef Masala<span class="spice-medium">🌶🌶</span></h4>
+                                <p class="dish-price">$20</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Meat cooked with onion, tomato, capsicum in masala gravy
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Beef Korma <span class="spice-mild">🌶</span></h4>
+                                <p class="dish-price">$20</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description"> Diced beef cooked in creamy cashew nut gravy
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Beef Madras<span class="spice-mild">🌶</span>/<span
+                                        class="spice-medium">🌶🌶</span></h4>
+                                <p class="dish-price">$20</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Combination of creamy coconut sauce cooked to perfection
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Beef Vindaloo<span class="spice-hot">🌶🌶🌶</span>
+                                </h4>
+                                </h4>
+                                <p class="dish-price">$20</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Lamb cooked in onion, tomato masala gravy
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Beef Pepper Fry<span class="spice-hot">🌶🌶🌶</span>
+                                </h4>
+                                <p class="dish-price">$20</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Spicy beef curry cooked with black pepper
+                                </p>
+                            </section>
+                            <section id="spice-level">
+                                <span class="spice-mild">🌶</span> = Mild &emsp;
+                                <span class="spice-medium">🌶🌶</span> = Medium &emsp;
+                                <span class="spice-hot">🌶🌶🌶</span> = Hot
+                            </section>
+                        </article>
+                        <article id="menu-seafood" class="menu-section hidden">
+                            <h3>Seafood</h3>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Prawn Malabari<span class="spice-mild">🌶</span></h4>
+                                <p class="dish-price">$22</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description"> Prawn cooked with onion, capsicum in coconut gravy
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Prawn / Fish Masala<span class="spice-medium">🌶🌶</span></h4>
+                                <p class="dish-price">$22</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Combination of spices cooked with onion, tomato and capsicum
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Prawn Vindaloo<span class="spice-hot">🌶🌶🌶</span></h4>
+                                <p class="dish-price">$22</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description"> Spicy curry cooked in Goan style
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Butter Prawn<span class="spice-mild">🌶</span></h4>
+                                <p class="dish-price">$22</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Blend of creamy tomato gravy with prawn
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Goan Fish Curry<span class="spice-mild">🌶</span>
+                                </h4>
+                                </h4>
+                                <p class="dish-price">$22</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Fish cooked with creamy coconut gravy
+                                </p>
+                            </section>
+                            <section id="spice-level">
+                                <span class="spice-mild">🌶</span> = Mild &emsp;
+                                <span class="spice-medium">🌶🌶</span> = Medium &emsp;
+                                <span class="spice-hot">🌶🌶🌶</span> = Hot
+                            </section>
+                        </article>
+                        <article id="menu-vegetarian" class="menu-section hidden">
+                            <h3>Vegetarian</h3>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Butter Paneer<span class="spice-mild">🌶</span></h4>
+                                <p class="dish-price">$17</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Indian cottage cheese cooked in creamy tomato gravy
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Paneer Tikka Masala<span class="spice-medium">🌶🌶</span></h4>
+                                <p class="dish-price">$17</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Cottage cheese with onion, tomato, capsicum and spiced gravy
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Kadai Paneer<span class="spice-medium">🌶🌶</span></h4>
+                                <p class="dish-price">$17</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Cottage cheese cooked in kadai Gravy</p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Paneer Bhurji<span class="spice-medium">🌶🌶</span></h4>
+                                <p class="dish-price">$17</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Gratted Cottage cheese cooked with onion, capsicum in tomato
+                                    sauce
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Palak Paneer<span class="spice-mild">🌶</span>/<span
+                                        class="spice-medium">🌶🌶</span>
+                                </h4>
+                                </h4>
+                                <p class="dish-price">$17</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Cottage cheese cooked in mild spiced spinach sauce
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Achari Paneer<span class="spice-medium">🌶🌶</span></h4>
+                                <p class="dish-price">$17</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Cottage cheese cooked in pickle sauce
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Vegetable Korma<span class="spice-mild">🌶</span></h4>
+                                <p class="dish-price">$17</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description"> Mix vegetable cooked in creamy cashew nut gravy
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Mix Vegetable<span class="spice-medium">🌶🌶</span></h4>
+                                <p class="dish-price">$17</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description"> Fresh vegetable cooked in medium spiced gravy
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Vegetable Madras<span class="spice-mild">🌶</span>/<span
+                                        class="spice-medium">🌶🌶</span>
+                                </h4>
+                                </h4>
+                                <p class="dish-price">$17</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Creamy coconut based delicacy cooked to perfection
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Vegetable Jalfrezi<span class="spice-medium">🌶🌶</span></h4>
+                                <p class="dish-price">$17</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Fresh vegetable cooked in tomato gravy
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Chole Masala/Chole Palak<span class="spice-medium">🌶🌶</span>
+                                </h4>
+                                <p class="dish-price">$17</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Chickpeas cooked in onion tomato gravy or spinach sauce
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Malai Kofta<span class="spice-mild">🌶</span></h4>
+                                <p class="dish-price">$17</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Mashed potato, dry fruit and cottage cheese dumpling cooked
+                                    in
+                                    rich
+                                    cashew nut gravy
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Aloo Gobi / Aloo Mutter<span class="spice-medium">🌶🌶</span></h4>
+                                <p class="dish-price">$17</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Potatoes cooked with cauliflower or green peas in spiced
+                                    sauce
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Saag Aloo<span class="spice-mild">🌶</span></h4>
+                                <p class="dish-price">$17</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Potatoes cooked in mild spiced spinach sauce
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Bombay Potatoes dry<span class="spice-mild">🌶</span></h4>
+                                <p class="dish-price">$17</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Potatoes tempered with cumin seed, curry leaves and
+                                    coriander
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Dal Tadka<span class="spice-mild">🌶</span>/<span
+                                        class="spice-medium">🌶🌶</span>
+                                </h4>
+                                </h4>
+                                <p class="dish-price">$17</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Yellow split lentil tempered with garlic, tomato and onion
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Dal Makhani<span class="spice-medium">🌶🌶</span></h4>
+                                <p class="dish-price">$17</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Black lentil & kidney beans cooked with tomato, cream and
+                                    butter
+                                </p>
+                            </section>
+                            <section id="spice-level">
+                                <span class="spice-mild">🌶</span> = Mild &emsp;
+                                <span class="spice-medium">🌶🌶</span> = Medium &emsp;
+                                <span class="spice-hot">🌶🌶🌶</span> = Hot
+                            </section>
+                        </article>
+                        <article id="menu-tandoori-bread" class="menu-section hidden">
+                            <h3>Tandoori Bread</h3>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Plain Naan</h4>
+                                <p class="dish-price">$3</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description"> Leavened refined flour bread</p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Garlic Naan</h4>
+                                <p class="dish-price">$4</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Garlic flavoured Naan</p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Cheese Naan</h4>
+                                <p class="dish-price">$5</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Naan stuffed with cheese</p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Cheese & Garlic Naan</h4>
+                                <p class="dish-price">$6</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description"> Naan stuffed with cheese and smeared with garlic</p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Peshawari Naan</h4>
+                                <p class="dish-price">$5</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description"> Naan stuffed with Nuts and Dry fruits</p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Aloo Naan</h4>
+                                <p class="dish-price">$5</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Naan stuffed with spiced mashed potatoes</p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Kheema Naan / Paneer Naan</h4>
+                                <p class="dish-price">$5</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Naan stuffed with spiced lamb mince or spiced cottage cheese
+                                </p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Chilli Naan</h4>
+                                <p class="dish-price">$4</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Spinach Naan</h4>
+                                <p class="dish-price">$4</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Cheese & Chilli Naan</h4>
+                                <p class="dish-price">$5</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Cheese & Spinach Naan</h4>
+                                <p class="dish-price">$5</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Roti</h4>
+                                <p class="dish-price">$3</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Wholemeal bread</p>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Paratha</h4>
+                                <p class="dish-price">$3</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                                <p class="dish-description">Flaky wholemeal bread</p>
+                            </section>
+                        </article>
+                        <article id="menu-rice" class="menu-section hidden">
+                            <h3>Rice</h3>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Steamed Rice</h4>
+                                <p class="dish-price">$3</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Saffron Rice</h4>
+                                <p class="dish-price">$6</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Coconut Rice</h4>
+                                <p class="dish-price">$6</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Jeera Peas Rice</h4>
+                                <p class="dish-price">$6</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Biryani Rice</h4>
+                                <p class="dish-price">$6</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                            </section>
+                        </article>
+                        <article id="menu-sides" class="menu-section hidden">
+                            <h3>Sides</h3>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Papadams</h4>
+                                <p class="dish-price">$3</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Cucumber Raita</h4>
+                                <p class="dish-price">$3</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Sweet Mango Chutney</h4>
+                                <p class="dish-price">$3</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Mint Sauce</h4>
+                                <p class="dish-price">$3</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                            </section>
+                            <section class="dish takeaway">
+                                <h4 class="dish-name">Pickles</h4>
+                                <p class="dish-price">$3</p>
+                                <span class="quantity">
+                                    <button type="button" class="quantity-button minus">-</button>
+                                    <input type="number" class="quantity-input" min="0" value="0">
+                                    <button type="button" class="quantity-button plus">+</button>
+                                </span>
+                            </section>
+                        </article>
+                        <button type="button" id="load-previous-order-button" class="form-button">Previous
+                            Order</button>
+                        <button type="button" id="clear-order-button" class="form-button">Clear
+                            Order</button>
+                        <br />
+                        <button type="button" id="review-order-button" class="form-button">Review Order</button>
+                    </section>
+                    <section id="orderSummary">
+                        <section id="order-total" class="hidden">
+                        </section>
+                        <fieldset id="customer-details" class="hidden">
+                            <label for="customername">Name: <input type="text" name="customername" id="customername"
+                                    pattern="[A-Za-z\s\-]{1,}"
+                                    title="Enter name using only letters, space ( ) or hyphen (-)" required
+                                    class="text-input"></label>
+                            <label for="phone">Phone: <input type="tel" name="phone" id="phone"
+                                    pattern="[0-9\s\-\+]{8,15}"
+                                    title="Please enter a phone number between 8 and 15 digits" class="text-input"
+                                    required></label>
+                            <br>
+                            <button type="button" id="back-button" class="form-button">Back</button>
+                            <br />
+                            <input type="submit" value="Submit Order" id="submit-order" class="form-button">
+                        </fieldset>
+                    </section>
+                    <section id="success" class="hidden">
+                        <h3>Order Submitted!</h3>
+                        <p>Thank you for your order!</p>
+                        <p>Your order has been successfully submitted to the kitchen.</p>
+                        <p>We will call or text when your order is ready for pick up.</p>
+                        <button id="start-over" type="submit" class="form-button">New Order</button>
+                    </section>
+                    <section class="menu-notes" id="menu-notes">
+                        <p>All prices include GST. Prices are subject to change without notice</p>
+                        <p>All curries are Gluten Free & Halal</p>
+                        <p>Free rice with all Curries (TAKEAWAY ONLY)</p>
+                    </section>
+
+                </section>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer: bottom navigation links and contact details -->
+    <footer>
+        <section id="footer-nav">
+            <aside id="footer-menu-1">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="report.html">Design Report</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                </ul>
+            </aside>
+            <aside id="footer-menu-2">
+                <h4>Opening Hours</h4>
+                <ul>
+                    <li>Tuesday - Sunday</li>
+                    <li>Lunch: 11:30am - 2:30pm</li>
+                    <li>Dinner: 5:00pm - 9:30pm</li>
+                    <li>Closed Mondays</li>
+                </ul>
+            </aside>
+            <aside id="footer-menu-3">
+                <h4>Location</h4>
+                <ul>
+                    <li>Chadstone Shopping Center</li>
+                    <li>1341 Dandenong Rd</li>
+                    <li>Malvern East VIC 3148</li>
+                    <li>T: (03) 9568 1486</li>
+                </ul>
+                <p></p>
+                <p></p>
+                <p></p>
+            </aside>
+        </section>
+        <section id="footer-copyright">
+            <p>© Copyright 2026 Brett Jenaway | W0104215 </p>
+        </section>
+
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
