@@ -1,0 +1,208 @@
+<!-- 
+    University of Southern Queensland
+    CSC5740 Client-Side Web Technology
+    Trimester 1, 2026
+
+    Assignment 4: Project
+ 
+    Student: Brett Jenaway
+    Student No: W0104215
+
+    Garden Indian Restaurant Website Design
+-->
+
+<!DOCTYPE html>
+
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="images/TheGardenIcon.png">
+    <!-- Google Fonts Embed Code -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kristi">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>Garden Indian Restaurant</title>
+</head>
+
+<body>
+
+    <nav>
+        <a id="hamburger">
+            ☰
+        </a>
+        <ul id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown"><a href="menu.html">Menus ▼</a>
+                <ul class="submenu">
+                    <li><a href="lunch.html">Lunch</a></li>
+                    <li><a href="dinner.html">Dinner</a></li>
+                    <li><a href="takeaway.html">Take-Away</a></li>
+                </ul>
+            </li>
+            <li><a href="location.html">Location</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="reservations.html" class="menu-button">Reservations</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="hero-image-section" class="transparent-bg">
+            <img id="hero-image" src="images/the-garden-hero-image.jpg"
+                alt="An appetizing Indian meal featuring naan, creamy curry, and fresh condiments">
+            <!-- Image credit: Dhiraj Jain 
+         Used under free license from Pexels.com
+         https://www.pexels.com/photo/top-view-of-an-indian-dish-with-onions-and-flatbread-on-the-side-12737918/
+         -->
+            <section id="logo-name" class="centered">
+                <h1>GARDEN</h1>
+                <h1>INDIAN</h1>
+                <h2>RESTAURANT</h2>
+                <p>CHADSTONE'S FAVOURITE INDIAN CUISINE SINCE 2012</p>
+            </section>
+        </section>
+        <section class="main-text">
+            <section id="location">
+
+
+                <section id="design-report">
+                    <h2 class="card-heading-italic">Website</h2>
+                    <h2 class="card-heading-regular">Design Report</h2>
+                    <h3>Introduction</h3>
+                    <p>This is a proposed new website design for The Garden Indian Restaurant. The aim was to create
+                        a modern, responsive and easy-to-use website.</p>
+                    <p>The old website was outdated and not modern. It was harder to read and navigate. This website
+                        has been completely redesigned with a modern interface and a focus on clear images and text.
+                    </p>
+                    <p>This new website features multiple pages including:</p>
+                    <ul>
+                        <li>Home page</li>
+                        <li>Menu pages</li>
+                        <li>Online takeaway ordering functionality</li>
+                        <li>Reservation form</li>
+                        <li>Location page</li>
+                        <li>About page</li>
+                    </ul>
+                    <p>There was a focus on usability, responsiveness and accessibility for all customers.</p>
+                    <h3>Design Style</h3>
+                    <p>The new design incorporates a warm colour palette to reflect Indian cuisine. The feature text
+                        colour is a earthy brown, reminiscent of many of the Indian curries available at the restaurant.
+                    </p>
+                    <p>A large hero image at the top of each page is designed to create a strong visual impact and
+                        connect the customer with the restaurant's food immediately when they arrive at the website.</p>
+                    <p>Fonts used are simple and clean, and are easy to read. There is one script font also used to add
+                        decoration and break up the bold text.</p>
+                    <p>The website has a consistent structure, with the same menu at the top and footer at the bottom.
+                    </p>
+                    <h3>Navigation</h3>
+                    <p>The website can be navigated using the main menu at the top of the site. There are also links in
+                        the bottom footer of each page to the menus and back to the home page.</p>
+                    <p>A clear reservation link at the top right enables customers to quickly make a booking for the
+                        restaurant.</p>
+                    <p>The website aims to have a clear navigation structure and makes finding everything easy.</p>
+
+                    <h3>Images</h3>
+                    <p>While some of the existing supplied images have been used, some require updating and new photos
+                        would be highly beneficial.</p>
+                    <p>A number of the provided images were not of high quality or had poor lighting, and their use on
+                        the website will detract from the new, modern feel of the site.</p>
+                    <p>The image at the top of every page (with curry, naan bread, onions limes and more) is called the
+                        'hero image'. This image was sourced from a free licence photo website.</p>
+                    <p>The image can be replaced with a high quality image of The Garden or the food, similar to the
+                        image now, or the existing image can continue to be used as it is used under a free license.</p>
+                    <p>Other images like the chef on the <a href="about.html">About page</a> are example images and can
+                        be updated with new high quality images of the real chefs at The Garden if desired.</p>
+
+                    <h3>Menus and Online Ordering Form</h3>
+                    <p>The takeaway menu has been redesigned into an interactive ordering form where customers can
+                        easily place online orders.</p>
+                    <p>Customers can choose their menu sub-section at the top and add or remove quantities for each
+                        dish. They can then review the whole order on one page before submitting it.</p>
+                    <p>The customer's last takeaway order can also be reloaded (with customer name and phone) to make
+                        repeat
+                        ordering fast and easy.</p>
+                    <p>The lunch and dinner menus follow the same format structure just without the ordering
+                        functionality. This means the menus are consistent across the whole website.</p>
+
+                    <h3>Bookings/Reservations</h3>
+                    <p>A new reservation form has been added to the website so customers can easily submit requests to
+                        make bookings.</p>
+                    <p>This form was designed to be simple and easy to use.</p>
+                    <p>The form ensures all the necessary information is included and will not submit without all the
+                        correct information.</p>
+
+
+                    <h3>Mobile Device Compatibility</h3>
+                    <p>The website is designed to function across computers, tablets and mobile phones. Pages and
+                        layouts will automatically adjust for different devices which helps readability.</p>
+                    <p>Images and menus will also scale appropriately for smaller devices.</p>
+
+                    <h3>Accessibility</h3>
+                    <p>The new website provides clear headings and readable text.</p>
+                    <p>Buttons and links are large and easy to interact with.
+                    <p>The website was designed so users of all technological capabilities can easily use the website.
+                    </p>
+
+
+                    <h3>Conclusion</h3>
+                    <p>Much thought and care was taken in designing this new website for The Garden. It provides a
+                        professional and modern online experience for customers to view menus, order online, make
+                        bookings and find out restaurant information.</p>
+                    <p>The new website design also helps improve convenience for customers through online ordering and
+                        reservation functionality.</p>
+
+                    <p>We hope you and your customers enjoy the new website design.</p>
+                    <p><strong>Brett Jenaway | W0104215 | Website designer</strong></p>
+                </section>
+    </main>
+
+    <!-- Footer: bottom navigation links and contact details -->
+    <footer>
+        <section id="footer-nav">
+            <aside id="footer-menu-1">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Food Menus</a></li>
+                    <li><a href="report.html">Design Report</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </aside>
+            <aside id="footer-menu-2">
+                <h4>Opening Hours</h4>
+                <ul>
+                    <li>Tuesday - Sunday</li>
+                    <li>Lunch: 11:30am - 2:30pm</li>
+                    <li>Dinner: 5:00pm - 9:30pm</li>
+                    <li>Closed Mondays</li>
+                </ul>
+            </aside>
+            <aside id="footer-menu-3">
+                <h4>Location</h4>
+                <ul>
+                    <li>Chadstone Shopping Center</li>
+                    <li>1341 Dandenong Rd</li>
+                    <li>Malvern East VIC 3148</li>
+                    <li>T: (03) 9568 1486</li>
+                </ul>
+                <p></p>
+                <p></p>
+                <p></p>
+            </aside>
+        </section>
+        <section id="footer-copyright">
+            <p>© Copyright 2026 Brett Jenaway | W0104215 </p>
+        </section>
+
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

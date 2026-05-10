@@ -16,10 +16,20 @@
 const foodMenuButtons = document.querySelectorAll(".food-menu-button");
 const menuSections = document.querySelectorAll(".menu-section");
 
+// Hamburger menu functionality
+const navToggle = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+
+navToggle.addEventListener("click", function () {
+    navMenu.classList.toggle("show");
+});
+
+
 // Add event listener to each menu button
 foodMenuButtons.forEach(button => {
     button.addEventListener("click", showMenu);
 })
+
 
 function showMenu() {
     // Get the current menu name
@@ -102,6 +112,7 @@ function updateTotal() {
 
         let itemName = item.querySelector(".dish-name").textContent.trim();
         itemName = itemName.replace(/🌶/g, "");
+        itemName = itemName.replace("-", "");
         let itemPrice = item.querySelector(".dish-price").textContent;
         itemPrice = Number(itemPrice.replace("$", ""));
 
@@ -162,7 +173,9 @@ takeawayItems.forEach(item => {
 // Add event listener for Review Order button
 
 const reviewButton = document.getElementById("review-order-button");
-reviewButton.addEventListener("click", reviewOrder);
+if (reviewButton) {
+    reviewButton.addEventListener("click", reviewOrder);
+}
 
 function reviewOrder() {
     // Add the hidden class to all menu items
@@ -175,7 +188,9 @@ function reviewOrder() {
 
 
 const backButton = document.getElementById("back-button");
-backButton.addEventListener("click", backForm);
+if (backButton) {
+    backButton.addEventListener("click", backForm);
+}
 
 function backForm() {
     // Add the hidden class to all menu items
@@ -185,9 +200,46 @@ function backForm() {
 
 // Save the order to localStorage when the user clicks submit
 const takeAwayForm = document.getElementById("takeaway-form");
-takeAwayForm.addEventListener("submit", saveOrder);
+if (takeAwayForm) {
+    takeAwayForm.addEventListener("submit", saveOrder);
+}
 
 function saveOrder(event) {
+
+    // Validation for customer name and phone number inputs
+    const formInputs = takeAwayForm.querySelectorAll("#customer-details input");
+
+    let isValidFlag = true;
+
+    const existing = document.getElementById("invalidText");
+    if (existing) {
+        existing.remove();
+    }
+
+    formInputs.forEach(input => {
+        // Remove any invalid red css styling on elements
+        input.classList.remove("invalid");
+        // Check each element in the fieldset for validity. If not valid, add invalid class and stop user proceeding.
+        if (input.checkValidity() == false) {
+            isValidFlag = false;
+            input.classList.add("invalid");
+        }
+
+    });
+
+    if (isValidFlag == false) {
+
+        event.preventDefault();
+
+        const invalidText = document.createElement("p");
+        invalidText.id = "invalidText";
+        invalidText.classList.add("invalidtext");
+        invalidText.textContent = "Please complete all required fields correctly.";
+        document.getElementById("submit-order").after(invalidText);
+        return;
+    }
+
+
 
     // Validation to ensure empty orders are not submitted
     if (quantityTotal == 0) {
@@ -240,7 +292,9 @@ function saveOrder(event) {
 
 // Add functionality for new order button
 const startOver = document.getElementById("start-over");
-startOver.addEventListener("click", startOrderAgain);
+if (startOver) {
+    startOver.addEventListener("click", startOrderAgain);
+}
 
 function startOrderAgain() {
     location.reload()
@@ -249,7 +303,9 @@ function startOrderAgain() {
 
 // Load the previous order when the user clicks Load Previous Order
 const previousOrder = document.getElementById("load-previous-order-button");
-previousOrder.addEventListener("click", loadPreviousOrder);
+if (previousOrder) {
+    previousOrder.addEventListener("click", loadPreviousOrder);
+}
 
 function loadPreviousOrder() {
     const lastOrder = localStorage.getItem("latestOrder");
@@ -286,8 +342,9 @@ function loadPreviousOrder() {
 
 // Clear all button
 const clearOrderButton = document.getElementById("clear-order-button");
-
-clearOrderButton.addEventListener("click", clearOrder);
+if (clearOrderButton) {
+    clearOrderButton.addEventListener("click", clearOrder);
+}
 
 function clearOrder() {
 
@@ -299,6 +356,59 @@ function clearOrder() {
 
     });
 
+    // Clear the name and phone number
+    document.getElementById("customername").value = "";
+    document.getElementById("phone").value = "";
+
+    // Update the new total
     updateTotal();
 
 }
+
+// Submit order button validation
+// const takeAwayForm = document.getElementById("takeaway-form");
+// if (reservationForm) {
+//     reservationForm.addEventListener("submit", validateReservation);
+// }
+
+// Reservation button
+const reservationForm = document.getElementById("reservation");
+if (reservationForm) {
+    reservationForm.addEventListener("submit", validateReservation);
+}
+
+// Function to validate data in each form
+function validateReservation(event) {
+    const formInputs = reservationForm.querySelectorAll("input");
+
+    let isValidFlag = true;
+
+    const existing = document.getElementById("invalidText");
+    if (existing) {
+        existing.remove();
+    }
+
+    formInputs.forEach(input => {
+        // Remove any invalid red css styling on elements
+        input.classList.remove("invalid");
+        // Check each element in the fieldset for validity. If not valid, add invalid class and stop user proceeding.
+        if (input.checkValidity() == false) {
+            isValidFlag = false;
+            input.classList.add("invalid");
+        }
+
+    });
+
+    if (isValidFlag == false) {
+
+        event.preventDefault();
+
+        const invalidText = document.createElement("p");
+        invalidText.id = "invalidText";
+        invalidText.classList.add("invalidtext");
+        invalidText.textContent = "Please complete all required fields correctly.";
+        document.getElementById("submit-reservation").after(invalidText);
+
+    }
+}
+

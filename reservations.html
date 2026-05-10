@@ -69,27 +69,53 @@
             </section>
         </section>
         <section class="main-text">
-            <section class="card">
+            <section class="food-menu">
+                <h2 class="card-heading-regular" id="reservation-heading">RESERVATIONS</h2>
+                <p class="card-description">Want to make a reservation? Fill in the form below to submit a
+                    reservation
+                    request.
+                </p>
+                <p class="card-description">The Garden caters for group bookings of up to 30 people.</p>
+                <form id="reservation" method="POST" action="" novalidate>
+                    <fieldset id="reservation-input">
+                        <label for="fname" class="reservation-label">First Name: </label>
+                        <input type="text" name="fname" id="fname" pattern="[A-Za-z\-]{2,}"
+                            title="Enter first name using only letters or hyphen (-)" class="reservation-input"
+                            required>
+                        <label for="lname" class="reservation-label">Last Name: </label>
+                        <input type="text" name="lname" id="lname" pattern="[A-Za-z\-]{2,}"
+                            title="Enter last name using only letters or hyphen (-)" class="reservation-input" required>
+                        <label for="email" class="reservation-label">Email:</label>
+                        <input type="email" name="email" id="email" class="reservation-input" required>
+                        <label for="phone" class="reservation-label">Phone:</label>
+                        <input type="tel" name="phone" id="phone" pattern="[0-9\s\-\+]{8,15}"
+                            title="Please enter phone number between 8 and 15 digits" class="reservation-input"
+                            required>
+                        <label class="reservation-label">Preferred Time:</label>
+                        <span id="reservationTime">
+                            <input type="radio" name="time" id="lunch" value="Lunch" class="reservation-input">
+                            <label for="lunch">Lunch</label>
+                            <input type="radio" name="time" id="dinner" value="dinner" class="reservation-input">
+                            <label for="dinner">Dinner</label>
+                        </span>
+                        <label for="groupsize" class="reservation-label">Group Size: </label>
+                        <input type="number" id="groupsize" name="groupsize" class="reservation-input" required
+                            title="Please enter group size with numbers only" min="1" max="30">
+                        <label name="bar service" class="reservation-label">Bar service?</label>
 
-                <span class="card-text card-right">
-                    <h2 class="card-heading-italic">View</h2>
-                    <h2 class="card-heading-regular">Our Menu</h2>
-                    <p>Explore our authentic Indian dishes, from rich curries and sizzling tandoori plates to fresh
-                        naan and traditional desserts.</p>
-                    <a href="menu.html" class="page-button">Food Menus</a>
-                </span>
-                <img src="images/goan-fish-curry.jpg" alt="Traditional Goan fish curry served with Indian spices">
+                        <label for="barService" class="reservation-label"><input type="checkbox" name="barService"
+                                value="Yes" id="barService" class="reservation-input">Yes</label>
+
+
+
+                        <label for="specialReqs" class="reservation-label">Special Requests:</label>
+                        <textarea id="specialReqs" name="Special Requests" class="reservation-input"></textarea>
+                    </fieldset>
+                    <input type="submit" id="submit-reservation" class="form-button">
+                </form>
+
             </section>
-            <section class="card">
-                <img src="images/TheGarden1.jpg" alt="Interior dining area of Garden Indian Restaurant">
-                <span class="card-text card-left">
-                    <h2 class="card-heading-italic">Discover</h2>
-                    <h2 class="card-heading-regular">Our Story</h2>
-                    <p>Learn about our passion for Indian cuisine, our family traditions, and the flavours and
-                        hospitality that inspire every dish we serve.</p>
-                    <a href="about.html" class="page-button">Learn More</a>
-                </span>
-            </section>
+
         </section>
     </main>
 

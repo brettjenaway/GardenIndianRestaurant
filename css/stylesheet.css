@@ -21,10 +21,6 @@
     --background-color: #F2F0EF;
     --text-accent-color: rgb(165, 127, 77);
     --text-accent-color-dark: rgb(116, 88, 52);
-    /* --feature-color: #7fffd4;
-    --dark-feature-color: #219190;
-    --line-color: #e5e5e5;
-    --button-color: #fdfdfd; */
 }
 
 body {
@@ -78,9 +74,8 @@ body {
     font-weight: 900;
 }
 
-#logo-name P {
+#logo-name p {
     font-size: 1.2em;
-    line-height: 0.5em;
     font-weight: 900;
 }
 
@@ -110,7 +105,6 @@ nav a {
     color: #fff;
     display: block;
     padding: 1em;
-    /* margin: 1em 2em; */
 }
 
 nav a:hover {
@@ -122,6 +116,13 @@ nav a:hover {
 .menu-button {
     border: 3px solid #fff;
     border-radius: 5px;
+}
+
+/* Hamburger button */
+
+#hamburger {
+    text-align: center;
+    display: none;
 }
 
 /* Sub-menu */
@@ -252,6 +253,8 @@ footer h4 {
 
     color: var(--text-accent-color);
     font-weight: 400;
+    max-width: 90%;
+    margin: 0 auto;
 }
 
 .card-heading-regular {
@@ -260,7 +263,9 @@ footer h4 {
     font-weight: 900;
     letter-spacing: -2px;
     font-size: 3em;
-    margin: 0;
+    max-width: 90%;
+    margin: 0 auto;
+
 }
 
 .page-button {
@@ -384,7 +389,6 @@ takeaway-form {
     border-radius: 8px;
     border: 1px solid var(--line-color);
     border-radius: 1em;
-    /* box-shadow: 0 15px 50px -12px #666; */
 }
 
 .hidden {
@@ -446,6 +450,8 @@ takeaway-form {
 .menu-notes {
     color: #999999;
     font-size: small;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 /****** Takeaway Form ******/
@@ -473,7 +479,6 @@ takeaway-form {
     max-width: 8em;
     border: 2px solid lightgrey;
     border-radius: 8px;
-
 }
 
 input:focus {
@@ -521,7 +526,6 @@ input:focus {
 
 .quantity-button {
     border: 2px solid lightgrey;
-    /* background-color: #fff; */
     font-size: 2em;
     color: var(--text-accent-color-dark);
     min-width: 1em;
@@ -607,4 +611,185 @@ input::-webkit-inner-spin-button {
 
 .errorLabel {
     color: #b61307
+}
+
+/* Reservation Page */
+#reservation-input {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+    border: none;
+}
+
+.reservation-input {
+    margin: 0.5em 0;
+    font-size: 1em;
+    padding: 0.5em;
+    border: 2px solid lightgrey;
+    border-radius: 8px;
+}
+
+.reservation-label {
+    margin: 0.5em 0;
+    font-size: 1em;
+    padding: 0.5em;
+
+}
+
+.invalid {
+    border: 2px solid red;
+    background-color: #ffe6e6;
+}
+
+.invalidtext {
+    color: red;
+    text-align: center;
+    margin-top: 1em;
+}
+
+#reservationTime {
+    display: flex;
+    align-items: center;
+}
+
+#reservationTime label,
+#reservationTime input,
+#barService {
+    margin-right: 1em;
+}
+
+
+.card-text-about {
+    border: 1px solid var(--line-color);
+    border-radius: 1em;
+    box-shadow: 0 25px 50px -12px #cccccc;
+    text-align: center;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 2em 0 1em 0;
+    z-index: 2;
+}
+
+.about-third {
+    padding-bottom: 3em;
+}
+
+#location {
+    background-color: #fff;
+    margin: 3em 0;
+    box-shadow: 0 25px 50px -12px #cccccc;
+}
+
+#location-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin: 0 auto;
+    padding: 1em 0;
+    gap: 2em;
+    align-items: center;
+}
+
+iframe {
+    border: 1px solid black;
+}
+
+#location-grid img {
+    max-width: 600px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+#opening-hours {
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+#opening-hours a {
+    font-family: var(--menu-font), sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: var(--text-accent-color);
+    display: block;
+    padding: 1em;
+    width: 8em;
+    margin: 0 auto;
+    border: 3px solid var(--text-accent-color);
+    border-radius: 5px;
+}
+
+#opening-hours a:hover {
+    color: var(--text-accent-color-dark);
+    border-color: var(--text-accent-color-dark);
+    transition: 0.2s;
+}
+
+
+/* Menus Page */
+#menus {
+    background-color: #fff;
+    margin: 3em 0;
+    box-shadow: 0 25px 50px -12px #cccccc;
+}
+
+#menus h2 {
+    text-align: center;
+}
+
+#menus-images {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    padding: 1em 0;
+    gap: 2em;
+    align-items: center;
+    max-width: 80%;
+}
+
+.menu-image-section {
+    position: relative;
+    text-align: center;
+    color: white;
+    top: 0;
+}
+
+.menu-image img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    opacity: 75%;
+    border-radius: 10px;
+}
+
+/* Hero image logo text */
+.menu-name {
+    text-transform: uppercase;
+    font-family: var(--logo-font), sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.menu-name h1 {
+    color: #fff;
+    font-size: 2.5em;
+    margin: 0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+#design-report {
+    width: 60%;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+
+#design-report h2 {
+    text-align: center;
 }

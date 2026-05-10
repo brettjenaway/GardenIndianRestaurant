@@ -1,0 +1,201 @@
+/* 
+    University of Southern Queensland
+    CSC5740 Client-Side Web Technology
+    Trimester 1, 2026
+
+    Assignment 4: Project
+ 
+    Student: Brett Jenaway
+    Student No: W0104215
+
+    Garden Indian Restaurant Website Design
+    
+*/
+/* ------------------------------------------ */
+/* -----                                ----- */
+/* ----- Media Queries & Responsiveness ----- */
+/* -----                                ----- */
+/* ------------------------------------------ */
+
+
+/* ---      Tablet responsiveness      --- */
+/* --- Screen size 601px to 900px wide --- */
+
+@media screen and (max-width: 900px) {
+
+
+    /* Hero image */
+    #logo-name h1 {
+        font-size: 3em;
+    }
+
+    #logo-name h2 {
+        font-size: 2em;
+    }
+
+    #logo-name p {
+        font-size: 1em;
+    }
+
+    .card {
+        width: 80%;
+        display: grid;
+        align-items: center;
+        text-align: center;
+    }
+
+    .card img,
+    .card-text {
+        margin: 0 auto;
+        max-height: 300px;
+    }
+
+    .card-right {
+        margin-bottom: -50px;
+    }
+
+    .card-left {
+        margin-top: -30px;
+    }
+
+    .dish {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+    }
+
+    .dish-price,
+    .dish-name {
+        text-align: center;
+    }
+
+    .dish-name {
+        display: block;
+    }
+
+    .dish-description {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .quantity {
+        justify-content: center;
+        margin: 0.5em 0 0 0;
+    }
+
+    #customer-details {
+        display: grid;
+        width: 80%
+    }
+
+    #back-button,
+    #submit-order {
+        width: 10em;
+        margin: 0 auto;
+    }
+
+    #location-grid {
+        display: block;
+    }
+
+    #location-address {
+        text-align: center;
+    }
+
+    #menus-images {
+        grid-template-columns: 1fr;
+    }
+
+    #reservation-input {
+        grid-template-columns: 1fr;
+    }
+
+
+}
+
+
+
+
+/* ---      Mobile responsiveness      --- */
+/* --- Screen size 600px or less       --- */
+
+@media screen and (max-width: 620px) {
+
+    #logo-name h1 {
+        font-size: 2em;
+    }
+
+    #logo-name h2 {
+        font-size: 1.5em;
+    }
+
+    #logo-name p {
+        font-size: 0.8em;
+    }
+
+
+    .card {
+        width: 80%;
+    }
+
+    .card img,
+    .card-text {
+        margin: 0 auto;
+
+        max-width: 80%;
+    }
+
+    .card-text {
+        max-height: 100%
+    }
+
+
+    /* Top Menu Responsiveness */
+    #hamburger {
+        display: block;
+        font-size: 2em;
+        padding: 0.4em;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        background-color: black;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav a {
+        padding: 1em;
+    }
+
+    .submenu {
+        position: static;
+        width: 100%;
+        background-color: rgba(38, 38, 38, 0.9);
+    }
+
+    .dropdown:hover .submenu {
+        display: block;
+    }
+
+    /* Footer responsiveness */
+    #footer-nav {
+        display: grid;
+        text-align: center;
+    }
+
+    #reservation-heading {
+        font-size: 2em;
+    }
+
+}

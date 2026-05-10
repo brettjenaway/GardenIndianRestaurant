@@ -20,9 +20,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/stylesheet.css">
-    <!-- <link rel="icon" type="image/x-icon" href=""> -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" type="image/x-icon" href="images/TheGardenIcon.png">
     <!-- Google Fonts Embed Code -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kristi">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,12 +34,12 @@
 </head>
 
 <body>
-    <header>
-
-    </header>
 
     <nav>
-        <ul>
+        <a id="hamburger">
+            ☰
+        </a>
+        <ul id="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li class="dropdown"><a href="menu.html">Menus ▼</a>
                 <ul class="submenu">
@@ -54,7 +55,7 @@
     </nav>
     <main>
         <section id="hero-image-section" class="transparent-bg">
-            <img id="hero-image" src="/images/pexels-dhiraj-jain-207743066-12737918.jpg"
+            <img id="hero-image" src="images/the-garden-hero-image.jpg"
                 alt="An appetizing Indian meal featuring naan, creamy curry, and fresh condiments">
             <!-- Image credit: Dhiraj Jain 
          Used under free license from Pexels.com
@@ -68,7 +69,7 @@
             </section>
         </section>
         <section class="main-text">
-            <form method="POST" action="" id="takeaway-form">
+            <form method="POST" action="" id="takeaway-form" novalidate>
                 <section class="food-menu">
                     <h2 class="card-heading-regular">Take-Away Menu</h2>
 
@@ -150,7 +151,7 @@
                         <article id="menu-chicken" class="menu-section hidden">
                             <h3>Chicken</h3>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Chicken Tikka Masala<span class="spice-medium">🌶🌶</span></h4>
+                                <h4 class="dish-name">Chicken Tikka Masala <span class="spice-medium">🌶🌶</span></h4>
                                 <p class="dish-price">$20</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -162,7 +163,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Chicken Balti<span class="spice-medium">🌶🌶</span></h4>
+                                <h4 class="dish-name">Chicken Balti <span class="spice-medium">🌶🌶</span></h4>
                                 <p class="dish-price">$20</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -175,7 +176,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Chicken Korma<span class="spice-mild">🌶</span></h4>
+                                <h4 class="dish-name">Chicken Korma <span class="spice-mild">🌶</span></h4>
                                 <p class="dish-price">$20</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -197,8 +198,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Chicken Vindaloo<span class="spice-hot">🌶🌶🌶</span>
-                                </h4>
+                                <h4 class="dish-name">Chicken Vindaloo <span class="spice-hot">🌶🌶🌶</span>
                                 </h4>
                                 <p class="dish-price">$20</p>
                                 <span class="quantity">
@@ -230,7 +230,7 @@
                         <article id="menu-lamb" class="menu-section hidden">
                             <h3>Lamb</h3>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Lamb Rogan Josh<span class="spice-medium">🌶🌶</span></h4>
+                                <h4 class="dish-name">Lamb Rogan Josh <span class="spice-medium">🌶🌶</span></h4>
                                 <p class="dish-price">$20</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -241,7 +241,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Lamb Korma<span class="spice-mild">🌶</span></h4>
+                                <h4 class="dish-name">Lamb Korma <span class="spice-mild">🌶</span></h4>
                                 <p class="dish-price">$20</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -263,7 +263,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Saag Lamb <span class="spice-mild">🌶</span>/<span
+                                <h4 class="dish-name">Saag Lamb <span class="spice-mild">🌶</span>-<span
                                         class="spice-medium">🌶🌶</span></h4>
                                 <p class="dish-price">$20</p>
                                 <span class="quantity">
@@ -275,8 +275,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Lamb Masala<span class="spice-medium">🌶🌶</span>
-                                </h4>
+                                <h4 class="dish-name">Lamb Masala <span class="spice-medium">🌶🌶</span>
                                 </h4>
                                 <p class="dish-price">$20</p>
                                 <span class="quantity">
@@ -288,7 +287,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Lamb Vindaloo<span class="spice-hot">🌶🌶🌶</span>
+                                <h4 class="dish-name">Lamb Vindaloo <span class="spice-hot">🌶🌶🌶</span>
                                 </h4>
                                 <p class="dish-price">$20</p>
                                 <span class="quantity">
@@ -308,7 +307,7 @@
                         <article id="menu-beef" class="menu-section hidden">
                             <h3>Beef</h3>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Beef Rogan Josh<span class="spice-medium">🌶🌶</span></h4>
+                                <h4 class="dish-name">Beef Rogan Josh <span class="spice-medium">🌶🌶</span></h4>
                                 <p class="dish-price">$20</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -319,7 +318,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Beef Masala<span class="spice-medium">🌶🌶</span></h4>
+                                <h4 class="dish-name">Beef Masala <span class="spice-medium">🌶🌶</span></h4>
                                 <p class="dish-price">$20</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -341,7 +340,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Beef Madras<span class="spice-mild">🌶</span>/<span
+                                <h4 class="dish-name">Beef Madras <span class="spice-mild">🌶</span>-<span
                                         class="spice-medium">🌶🌶</span></h4>
                                 <p class="dish-price">$20</p>
                                 <span class="quantity">
@@ -353,8 +352,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Beef Vindaloo<span class="spice-hot">🌶🌶🌶</span>
-                                </h4>
+                                <h4 class="dish-name">Beef Vindaloo <span class="spice-hot">🌶🌶🌶</span>
                                 </h4>
                                 <p class="dish-price">$20</p>
                                 <span class="quantity">
@@ -366,7 +364,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Beef Pepper Fry<span class="spice-hot">🌶🌶🌶</span>
+                                <h4 class="dish-name">Beef Pepper Fry <span class="spice-hot">🌶🌶🌶</span>
                                 </h4>
                                 <p class="dish-price">$20</p>
                                 <span class="quantity">
@@ -386,7 +384,7 @@
                         <article id="menu-seafood" class="menu-section hidden">
                             <h3>Seafood</h3>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Prawn Malabari<span class="spice-mild">🌶</span></h4>
+                                <h4 class="dish-name">Prawn Malabari <span class="spice-mild">🌶</span></h4>
                                 <p class="dish-price">$22</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -397,7 +395,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Prawn / Fish Masala<span class="spice-medium">🌶🌶</span></h4>
+                                <h4 class="dish-name">Prawn / Fish Masala <span class="spice-medium">🌶🌶</span></h4>
                                 <p class="dish-price">$22</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -408,7 +406,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Prawn Vindaloo<span class="spice-hot">🌶🌶🌶</span></h4>
+                                <h4 class="dish-name">Prawn Vindaloo <span class="spice-hot">🌶🌶🌶</span></h4>
                                 <p class="dish-price">$22</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -419,7 +417,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Butter Prawn<span class="spice-mild">🌶</span></h4>
+                                <h4 class="dish-name">Butter Prawn <span class="spice-mild">🌶</span></h4>
                                 <p class="dish-price">$22</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -430,8 +428,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Goan Fish Curry<span class="spice-mild">🌶</span>
-                                </h4>
+                                <h4 class="dish-name">Goan Fish Curry <span class="spice-mild">🌶</span>
                                 </h4>
                                 <p class="dish-price">$22</p>
                                 <span class="quantity">
@@ -451,7 +448,7 @@
                         <article id="menu-vegetarian" class="menu-section hidden">
                             <h3>Vegetarian</h3>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Butter Paneer<span class="spice-mild">🌶</span></h4>
+                                <h4 class="dish-name">Butter Paneer <span class="spice-mild">🌶</span></h4>
                                 <p class="dish-price">$17</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -462,7 +459,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Paneer Tikka Masala<span class="spice-medium">🌶🌶</span></h4>
+                                <h4 class="dish-name">Paneer Tikka Masala <span class="spice-medium">🌶🌶</span></h4>
                                 <p class="dish-price">$17</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -473,7 +470,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Kadai Paneer<span class="spice-medium">🌶🌶</span></h4>
+                                <h4 class="dish-name">Kadai Paneer <span class="spice-medium">🌶🌶</span></h4>
                                 <p class="dish-price">$17</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -483,7 +480,7 @@
                                 <p class="dish-description">Cottage cheese cooked in kadai Gravy</p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Paneer Bhurji<span class="spice-medium">🌶🌶</span></h4>
+                                <h4 class="dish-name">Paneer Bhurji <span class="spice-medium">🌶🌶</span></h4>
                                 <p class="dish-price">$17</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -495,9 +492,8 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Palak Paneer<span class="spice-mild">🌶</span>/<span
+                                <h4 class="dish-name">Palak Paneer <span class="spice-mild">🌶</span>-<span
                                         class="spice-medium">🌶🌶</span>
-                                </h4>
                                 </h4>
                                 <p class="dish-price">$17</p>
                                 <span class="quantity">
@@ -509,7 +505,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Achari Paneer<span class="spice-medium">🌶🌶</span></h4>
+                                <h4 class="dish-name">Achari Paneer <span class="spice-medium">🌶🌶</span></h4>
                                 <p class="dish-price">$17</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -520,7 +516,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Vegetable Korma<span class="spice-mild">🌶</span></h4>
+                                <h4 class="dish-name">Vegetable Korma <span class="spice-mild">🌶</span></h4>
                                 <p class="dish-price">$17</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -531,7 +527,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Mix Vegetable<span class="spice-medium">🌶🌶</span></h4>
+                                <h4 class="dish-name">Mix Vegetable <span class="spice-medium">🌶🌶</span></h4>
                                 <p class="dish-price">$17</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -542,9 +538,8 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Vegetable Madras<span class="spice-mild">🌶</span>/<span
+                                <h4 class="dish-name">Vegetable Madras <span class="spice-mild">🌶</span>-<span
                                         class="spice-medium">🌶🌶</span>
-                                </h4>
                                 </h4>
                                 <p class="dish-price">$17</p>
                                 <span class="quantity">
@@ -556,7 +551,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Vegetable Jalfrezi<span class="spice-medium">🌶🌶</span></h4>
+                                <h4 class="dish-name">Vegetable Jalfrezi <span class="spice-medium">🌶🌶</span></h4>
                                 <p class="dish-price">$17</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -567,7 +562,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Chole Masala/Chole Palak<span class="spice-medium">🌶🌶</span>
+                                <h4 class="dish-name">Chole Masala/Chole Palak <span class="spice-medium">🌶🌶</span>
                                 </h4>
                                 <p class="dish-price">$17</p>
                                 <span class="quantity">
@@ -579,7 +574,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Malai Kofta<span class="spice-mild">🌶</span></h4>
+                                <h4 class="dish-name">Malai Kofta <span class="spice-mild">🌶</span></h4>
                                 <p class="dish-price">$17</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -593,7 +588,8 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Aloo Gobi / Aloo Mutter<span class="spice-medium">🌶🌶</span></h4>
+                                <h4 class="dish-name">Aloo Gobi / Aloo Mutter <span class="spice-medium">🌶🌶</span>
+                                </h4>
                                 <p class="dish-price">$17</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -605,7 +601,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Saag Aloo<span class="spice-mild">🌶</span></h4>
+                                <h4 class="dish-name">Saag Aloo <span class="spice-mild">🌶</span></h4>
                                 <p class="dish-price">$17</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -616,7 +612,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Bombay Potatoes dry<span class="spice-mild">🌶</span></h4>
+                                <h4 class="dish-name">Bombay Potatoes Dry <span class="spice-mild">🌶</span></h4>
                                 <p class="dish-price">$17</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -628,9 +624,8 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Dal Tadka<span class="spice-mild">🌶</span>/<span
+                                <h4 class="dish-name">Dal Tadka <span class="spice-mild">🌶</span>-<span
                                         class="spice-medium">🌶🌶</span>
-                                </h4>
                                 </h4>
                                 <p class="dish-price">$17</p>
                                 <span class="quantity">
@@ -642,7 +637,7 @@
                                 </p>
                             </section>
                             <section class="dish takeaway">
-                                <h4 class="dish-name">Dal Makhani<span class="spice-medium">🌶🌶</span></h4>
+                                <h4 class="dish-name">Dal Makhani <span class="spice-medium">🌶🌶</span></h4>
                                 <p class="dish-price">$17</p>
                                 <span class="quantity">
                                     <button type="button" class="quantity-button minus">-</button>
@@ -935,9 +930,9 @@
                 <h4>Navigation</h4>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="menu.html">Food Menus</a></li>
                     <li><a href="report.html">Design Report</a></li>
-                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
                 </ul>
             </aside>
             <aside id="footer-menu-2">
